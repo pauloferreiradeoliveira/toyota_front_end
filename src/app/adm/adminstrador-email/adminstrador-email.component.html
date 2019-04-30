@@ -1,0 +1,79 @@
+<article class="top">
+  <div class="container">
+    <h2>Contatos</h2>
+    <h3>Responder clientes por email</h3>
+  </div>
+</article>
+
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4" *ngIf="(emails$ | async) as emails; else loading">
+        <div class="col-sm-12 label-informcao panel-heading card-header ">
+          <label>Lista de Clientes</label>
+        </div>
+
+        <div class="panel-heading card-header accordion" *ngFor="let l of emails">
+          <a (click)="mudar(l)">{{ l.nome }}</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-8" *ngIf="email">
+
+        <div class="col-sm-12 label-informcao panel-heading card-header ">
+          <label>Email</label>
+        </div>
+        <div class="email">
+
+          <h4>{{ email.nome }}</h4>
+          <h5><span>Email</span> {{ email.email }}</h5>
+          <h5><span>Assunto</span> {{ email.assunto }}</h5>
+          <p>{{ email.mensagem }}</p>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-success" (click)="openModal(template)">
+              Responder
+            </button>
+            <button type="reset" class="btn btn-danger" (click)="onDelete()">
+                <i class="fas fa-trash"></i> Apagar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left"><i class="fas fa-paper-plane"></i> Responder</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form class="modal-body" [formGroup]="form">
+    <div class="form-group">
+      <label for="assunto">Assunto</label>
+      <input 
+        type="text"
+        class="form-control" 
+        id="assunto" 
+        [ngClass]="{ 'is-invalid': submitted && hasError('assunto')}"  formControlName="assunto" 
+       />
+    </div>
+    <div class="form-group">
+      <label for="mensagem">Mensagem</label>
+      <textarea 
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && hasError('mensagem')}"  formControlName="mensagem" 
+        id="mensagem"
+        rows="3"></textarea>
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-secondary" (click)="onCancel()">Cancelar</button>
+        <button class="btn btn-success" (click)="salvar()"><i class="fas fa-paper-plane"></i> Enviar</button>
+      </div>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #loading>
+    <i class="fas fa-spinner fa-pulse"></i><span> Carregando Emails ...</span>
+</ng-template>

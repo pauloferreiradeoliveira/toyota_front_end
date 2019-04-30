@@ -1,0 +1,142 @@
+[
+    {
+        "id":1,
+        "titulo":"BALANCEAMENTO",
+        "descricao":"Balanceamento de um pneu permite que a roda gire sem provocar vibrações nos veículos em determinadas velocidades",
+        "subServicos":[
+            {
+                "titulo": "Problemas Causados",
+                "descricao": "<p>É o desequilíbrio das rodas e pneus, é o principal causador de vibrações no volante. Isto é causado pelo fato que o pneu nunca tem uma distribuição de borracha uniforme em sua circunferência. </p><p>O desbalanceamento causa desgaste irregular chamado multi-escavado, na região em que se encontra a maior concentração de massa, perda de tração e desconforto.</p><p>O fenômeno de vibração do pneu manifesta-se a cada giro da roda. Sua intensidade e frequência aumentam proporcionalmente a velocidade de rotação.<p>"
+            },
+            {
+                "titulo": "O que é ?",
+                "descricao": "<p>Como a roda não tem uma distribuição uniforme, o balanceamento compensa através de contrapesos (chumbo na roda) o equilíbrio do conjunto de rotação.</p><p>Ao montar um conjunto de rodas duplas, devemos sempre observar a colocação das válvulas, que deverão situar-se uma oposta à outra. A fim de proporcionar melhor distribuição das massas, evitando, desta forma, um possível desbalanceamento.</p>"
+            },
+            {  
+                "titulo": "Quanto tempo demora?"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "titulo":"ALINHAMENTO",
+        "descricao":"Alinhamento é o ajuste da suspensão em determinados valores que garantem a segurança e a estabilidade do veículo. Ao serem construídos, os veículos têm as rodas colocadas na posição correta de alinhamento, respeitando a máxima eficiência de rolamento, dirigibilidade e esterção.",
+        "subServicos":[
+            {  
+                "titulo": "É importante?",
+                "descricao": "O alinhamento previne, desgaste irregular dos pneus, aumentando a sua vida útil, o aumento do atrito do pneu no solo, contribuindo para a economia de combustível do veículo e o deslocamento do veículo, melhorando a dirigibilidade e a segurança. "
+            },
+            {  
+                "titulo": "Quando fazer alinhamento?",
+                "descricao": "O ideal é fazer o alinhamento a cada 10.000 km, mas sempre que for pegar a estrada, fazer uma viagem ou depois de ter enfrentado uma estrada muito esburacada, é super importante que o alinhamento seja feito."
+            }, 
+            {  
+                "titulo": "Quanto tempo demora?",
+                "descricao": ""
+            },
+            {  
+                "titulo": "O que é ?",
+                "descricao": "Alinhamento é o ajuste da suspensão em determinados valores que garantem a segurança e a estabilidade do veículo. Ao serem construídos, os veículos têm as rodas colocadas na posição correta de alinhamento, respeitando a máxima eficiência de rolamento, dirigibilidade e esterção"
+            }
+
+        ]
+    },
+    {
+        "id":3,
+        "titulo":"Revisão",
+        "descricao": "Fazer a revisão automotiva é uma tarefa essencial para rodar tranquilo e não sofrer com imprevistos na estrada, não é mesmo? O objetivo desse trabalho é evitar, por exemplo, a quebra de um componente ou mesmo a parada total do veículo no meio da rua. Como você pode imaginar, podemos correr alguns riscos quando a manutenção preventiva do automóvel não é levada a sério.",
+        "subServicos":[
+            {  
+                "titulo": "É importante?",
+                "descricao": "Além de manter as dores de cabeça distantes enquanto você utiliza seu carro, a revisão é essencial para a preservação das peças."
+            },
+            {  
+                "titulo": "De quanto em quanto tempo deve-se fazer a revisão?",
+                "descricao": "Geralmente, a revisão deve ser feita a cada 6 meses ou a cada 10 mil quilômetros rodados — tudo depende de qual marca for atingida antes. Contudo, o prazo exato consta no manual do proprietário do veículo"
+            }
+        ]
+    },
+    {
+        "id":4,
+        "titulo":"Suspensão"
+    },
+    {
+        "id":15,
+        "titulo":"Freio"
+    },
+    {
+        "id":5,
+        "titulo":"Direção"
+    },
+    {
+        "id":6,
+        "titulo":"Desempeno de rodas",
+        "descricao":"Os buracos nas ruas e falta de cuidado ao estacionar é um risco de dano para as rodas que custam um alto preço. Desempenar roda liga leve pode resolver parcialmente o problema, pode ser necessário que após o procedimento o veículo passe por alinhamento e balanceamento."
+    },
+    {
+        "id":7,
+        "titulo":"Desmontagem e montagem de pneu",
+        "descricao":"Pneus de um carro são a única ligação entre o carro e a estrada que passa por baixo, estes devem ser trocados periodicamente para manutenção de rotina ou imprevistos A montagem e a desmontagem de um pneu devem ser efetuadas por um profissional treinado e qualificado, utilizando ferramentas e procedimentos adequados."
+    },
+    {
+        "id":8,
+        "titulo":"Sistema de injeção",
+        "descricao":"A injeção eletrônica é um sistema de alimentação de combustível e gerenciamento de um motor de um veículo automotor melhorando o desempenho dos motores, diminuindo o consumo de combustível e reduzindo a emissão de gases poluentes. Isso é possível porque o sistema de injeção eletrônico permite um controle mais completo e adequado da mistura de ar e combustível que entra no motor.",
+        "subServicos":[
+            {
+                "titulo":"Problemas típicos",
+                "descricao":"Geralmente, quando o sistema de injeção apresenta sinais de ineficiência o motor fica engasgando e com pouco rendimento, a marcha lenta fica irregular, e a potência do veículo diminui."
+            }
+        ]
+    },
+    {
+        "id":15,
+        "titulo":"ABS e AIR BAG",
+        "descricao":"Desde o ano de 2014, automóveis novos saem de fábrica com airbag duplo frontal, um para o motorista e outro para o passageiro do banco da frente, e o sistema de freios ABS. Airbags e ABS foram implementados para dar mais segurança aos ocupantes do carro.",
+        "subServicos":[
+            {
+                "titulo":"ABS",
+                "descricao":"Sistema de freios ABS evita que uma ou mais rodas do carro travem durante a frenagem, em qualquer tipo de superfície. Desta forma, o veículo mantém a trajetória e o motorista consegue fazer manobras de desvio capazes, muitas vezes, de evitar colisões graves. Na chuva, o ABS reduz consideravelmente a distância necessária para parar o carro, comparado ao sistema de freios tradicional"
+            },
+            {
+                "titulo":"AIR BAG",
+                "descricao":"Os airbags podem salvar vidas ou reduzir a gravidade dos ferimentos do motorista e do passageiro da frente em caso de colisões. As bolsas de ar são infladas em frações de segundo e amortecem o choque do corpo dos ocupantes contra o volante ou o painel do carro. Apesar de toda a proteção proporcionada pelo airbag, é importante nunca esquecer do cinto de segurança"
+            }
+        ]
+    },
+    {
+        "id":9,
+        "titulo":"Reparo em motor"
+    },  
+    {
+        "id":10,
+        "titulo":"Reparo em transmissão manual e automática",
+        "descricao":"A transmissão automotiva é responsável por fazer a regulagem da capacidade de toque do motor, de acordo com a velocidade do veículo. Ou seja, é por meio da caixa de câmbio que você pode aproveitar toda a potência do seu carro, levando-o a atingir os melhores índices de desempenho."
+    },
+    {
+        "id":11,
+        "titulo":"Reparo em diferencial"
+    },
+    {
+        "id":12,
+        "titulo":"Troca de correia dentada",
+        "descricao":"A correia dentada tem a função de sincronizar o giro do virabrequim junto com o comando de válvulas, mantendo o carro no giro perfeito e evitando que o pistão se choque com as válvulas do carro.",
+        "subServicos":[
+            {
+                "titulo":"Quando trocar a correia dentada",
+                "descricao":"As fabricantes costumam sugerir a troca da correia quando o veículo chega aos 50.000 km rodados, ou após o período de 3 anos. O ideal é seguir a orientação do fabricante e substituir na quilometragem correta, evitando problemas com o motor."
+            }
+        ]
+    },
+    {
+        "id":14,
+        "titulo":"Troca de embreagem",
+        "descricao":"Embreagem tem a função de transmitir a rotação do motor para o câmbio e para as rodas do carro, além de filtrar as vibrações torcionais geradas pelo motor, reduzindo os ruídos e desgastes dos componentes de transmissão. A recomendação é avaliar a necessidade da troca da embreagem do carro a cada 40 mil quilômetros, em média. Para seguir o tempo certo, é ideal que o motorista consulte o prazo indicado no manual do proprietário e vá até seu mecânico de confiança caso perceba algum problema.",
+        "subServicos":[
+            {
+                "titulo":"Sinais de que é necessário fazer a troca",
+                "descricao":"<p>Pedal duro: o motorista precisa fazer mais força do que o comum para acionar o pedal.</p> <p>Patinação: perda de força de transmissão que leva o carro a patinar.</p><p>Trepidação: é o excesso de vibração do veículo ao sair do lugar.</p><p>Dificuldade de engate: grande dificuldade para selecionar as marchas ou marchas raspando.<p>"
+            }
+        ]
+    }
+]

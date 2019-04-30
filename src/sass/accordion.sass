@@ -1,0 +1,37 @@
+@import 'vars'
+
+$sizeBorder: 5px;
+
+.accordion
+    width: 100%
+
+    .card-header
+        border-left: $sizeBorder solid $cinza
+        transition-duration: 0.5s
+    
+    .card-header:hover
+        border-left: $sizeBorder solid $corprimario
+        button
+            color: $corprimario
+            text-decoration: none
+
+    .panel-open
+        .card-header
+            border-left: $sizeBorder solid $corprimario
+        button
+            color: $corprimario
+            text-decoration: none
+
+    button
+        color: $cor
+        font-family: 'Montserrat', sans-serif
+    
+    .panel-body
+        font-size: 1rem
+        color: $corTexto
+        line-height: 1.8
+        text-align:  justify
+        text-indent: 20px 
+        font-family: 'Open Sans'
+    
+   

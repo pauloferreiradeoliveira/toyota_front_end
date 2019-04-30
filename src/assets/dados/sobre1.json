@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "titulos": "",
+  "lista": [
+    {
+      "id": 1,
+      "titulos": "Nossa Missão",
+      "descricao": "Trazer a solução para os nossos clientes com qualidade e confiança, buscando inovações tecnológicas contínuas, e novas tecnologias de ponta, atendimento personalizado e garantia nos serviços prestados."
+    },
+    {
+      "id": 2,
+      "titulos": "Nossa Visão",
+      "descricao": "Ser referência em qualidade e mão-de-obra especializada. Buscar, através de treinamentos, o aperfeiçoamento da mão-de-obra, trazendo benefícios tanto para a empresa como para os colaboradores. Buscar novas tecnologias, que aumentem a eficiência operacional. Trabalhar sem prejudicar o meio ambiente. Gerar melhor qualidade de vida para aos colaboradores, melhorando suas condições de trabalho."
+    },
+    {
+      "id": 3,
+      "titulos": "Valores",
+      "descricao": "Prestar serviços com qualidade, ética e responsabilidade social, através de gestão de pessoas, com clima organizacional de qualidade. Manter parcerias com fornecedores de qualidade. Conquistar e manter clientes satisfeitos."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<div class="alert alert-{{ type }} no-margin" role="alert">
+  <i class="fas fa-spinner fa-pulse"  *ngIf="loading"></i>
+  {{ message }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="onClose()" *ngIf="!loading">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

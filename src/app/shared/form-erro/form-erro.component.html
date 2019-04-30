@@ -1,0 +1,9 @@
+<div class="invalid-feedback" *ngIf="hasError() && hasError()['required']">
+  Por favor informe um {{ valor }} para o curso.
+</div>
+<div class="invalid-feedback" *ngIf="hasError() && hasError()['minlength']">
+  {{ valor }} precisa ter no mínimo {{ hasError()['minlength'].requiredLength }} caracteres.
+</div>
+<div class="invalid-feedback" *ngIf="hasError() && hasError()['maxlength']">
+  {{ valor }} precisa ter no máximo {{ hasError()['maxlength'].requiredLength }} caracteres.
+</div>

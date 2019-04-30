@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <img src="http://www.toyolages.com.br/wp-content/uploads/2018/01/toyota_lages_n.png" alt="Totolages"
+    class="img-fluid" />
+  <button class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-label="Toggle navigation"
+    (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed"
+    >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" [collapse]="isCollapsed">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"  routerLinkActive="active">
+        <a class="nav-link" routerLink="/adm/servicos">Serviços</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/adm/responder">Contatos</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/adm/email">Email Enviados</a>
+        </li>
+      <li class="nav-item" *ngIf="adm()">
+        <a class="nav-link" routerLink="/adm/usuario">Usuários</a>
+      </li>
+
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="sair()">Sair</button>
+    </form>
+  </div>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="navbar  navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" >Toyota Lajes</a>
+</footer>

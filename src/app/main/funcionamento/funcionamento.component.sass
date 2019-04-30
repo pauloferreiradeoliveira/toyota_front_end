@@ -1,0 +1,29 @@
+@import 'top'
+@import 'vars'
+
+
+.accordion
+    width: 100%
+    border-left: $sizeBorder solid $cinza
+    a
+        color: $cor
+        font-family: 'Montserrat', sans-serif;
+  
+.accordion:hover
+    border-left: $sizeBorder solid $corprimario
+    a
+        color: $corprimario
+
+.active
+    border-left: $sizeBorder solid $corprimario
+    a
+        color: $corprimario
+
+@media (min-width: 992px) 
+    .col-md-4
+        margin: 1.2rem 0%
+
+    
+
+    
+   

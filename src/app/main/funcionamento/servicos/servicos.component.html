@@ -1,0 +1,18 @@
+<main *ngIf="servicos">
+  <h4>{{ servicos.titulo | uppercase  }}</h4>
+  <p [innerHTML]="servicos.descricao" *ngIf="servicos.descricao"></p>
+  <tabset [vertical]="true" type="pills" *ngIf="servicos.subServicos">
+    <tab
+      [heading]="s.titulo"
+      [id]="s.id"
+      customClass = "vermelho"
+      *ngFor="let s of servicos.subServicos"
+    >
+      <h4>
+        {{ s.titulo  | uppercase  }}
+      </h4>
+      <img [src]="s.imagens" *ngIf="s.imagens" />
+      <p [innerHTML]="s.descricao" *ngIf="s.descricao" ></p>
+    </tab>
+  </tabset>
+</main>

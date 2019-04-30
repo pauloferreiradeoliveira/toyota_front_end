@@ -1,0 +1,22 @@
+<article class="top">
+  <div class="container">
+    <h2>Serviços</h2>
+  </div>
+</article>
+
+<article class="container">
+  <div class="row">
+    <div class="col-12 col-md-4" *ngIf="( servicos$ | async) as servicos; else loading">
+      <div class="panel-heading card-header accordion" routerLinkActive="active" *ngFor="let l of servicos">
+        <a [routerLink]="[l.id]">{{ l.titulo | uppercase }}</a>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</article>
+
+<ng-template #loading>
+  <i class="fas fa-spinner fa-pulse"></i><span> Carregando Serviços ...</span>
+</ng-template>

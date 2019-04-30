@@ -1,0 +1,26 @@
+{
+  "id":2,
+  "titulo":"Alinhamento",
+  "descricao":"Alinhamento é o ajuste da suspensão em determinados valores que garantem a segurança e a estabilidade do veículo. Ao serem construídos, os veículos têm as rodas colocadas na posição correta de alinhamento, respeitando a máxima eficiência de rolamento, dirigibilidade e esterção.",
+  "subServicos":[
+      {  
+          "titulo": "É importante?",
+          "descricao": "O alinhamento previne, desgaste irregular dos pneus, aumentando a sua vida útil, o aumento do atrito do pneu no solo, contribuindo para a economia de combustível do veículo e o deslocamento do veículo, melhorando a dirigibilidade e a segurança. "
+      },
+      {  
+          "titulo": "Quando fazer alinhamento?",
+          "descricao": "O ideal é fazer o alinhamento a cada 10.000 km, mas sempre que for pegar a estrada, fazer uma viagem ou depois de ter enfrentado uma estrada muito esburacada, é super importante que o alinhamento seja feito."
+      }, 
+      {  
+          "titulo": "Quanto tempo demora?",
+          "video": "",
+          "imagens": "",
+          "descricao": ""
+      },
+      {  
+          "titulo": "O que é ?",
+          "descricao": "Alinhamento é o ajuste da suspensão em determinados valores que garantem a segurança e a estabilidade do veículo. Ao serem construídos, os veículos têm as rodas colocadas na posição correta de alinhamento, respeitando a máxima eficiência de rolamento, dirigibilidade e esterção"
+      }
+
+  ]
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "titulos": "Sobre a oficina",
+    "imagem":["assets/1.jpg","assets/2.jpg"],
+    "descricao": "<p>É comum acreditar que seu automóvel não irar falhar. No entanto, é preciso cuidado. Existe sempre a tendência do veículo apresentar problemas. </p><p>Muitas pessoas tem dificuldade na hora de fazer uma escolha. Nesse sentido, a Toyota Lages irar te auxiliar de maneira rápida e efetiva. Nada é mais importante do que levar o seu carro em um local seguro e onde a equipe preste um serviço de qualidade, competência técnica especializada, bom relacionamento com os clientes e rapidez. </p><p>Um trabalho deixa de ser uma obrigação quando é feito com amor e dedicação. O serviço prestado pela Toyota Lages é justamente isto. Os profissionais da empresa, visam sempre prestar um atendimento de excelência, apaixonados pelo que fazem. </p></div>"
+  },
+  {
+    "id": 2,
+    "titulos": "Como saber qual é a melhor oficina em Brasília?",
+    "lista": [
+      {
+        "id": 1,
+        "titulos": "Estrutura",
+        "descricao": "A Toyota Lages apresenta estrutura apropriada, equipamentos, ferramentas e profissionais capacitados. "
+      },
+      {
+        "id": 2,
+        "titulos": "Habilidade técnica",
+        "descricao": "A Toyota Lages conta com uma equipe especializada e experiente, tendo em vista, sempre a eficiência, eficácia e rapidez."
+      },
+      {
+        "id": 3,
+        "titulos": "APARELHAGEM",
+        "descricao": "É importante destacar a aparelhagem que possuímos, pois, os veículos modernos, necessitam de aparelhagem adequadas. Temos aparelhos corretos, para que possamos diagnosticar os problemas, com menor probabilidade de erros."
+      },
+      {
+        "id": 5,
+        "titulos": "Orçamento",
+        "descricao": "Ao realizar um orçamento, são detalhados todos os custos. Em caso de dúvidas, os profissionais estarão capazes e dispostos a esclarecer as mesmas."
+      },
+    
+      {
+        "id": 4,
+        "titulos": "Primeiro contato",
+        "descricao": "Ao deixar seu carro na oficina, prezamos pelo cuidado com o veículo, como: definição de um prazo de resposta, realização de um Checklist, detalhando o estado de conservação do carro, colocação de proteções necessárias (para bancos, volante, revestimento interno, carroceria, entre outros)."
+      }
+    ]
+  }
+]

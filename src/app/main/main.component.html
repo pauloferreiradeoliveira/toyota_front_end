@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-lg top">
+  <div class="container">
+    <div class="primeiro">
+      <a href="https://www.google.com.br/maps/dir/''/toyolages/@-15.822672,-48.028042,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x935a303678269ecb:0x65e17c1e55a2c9cd!2m2!1d-47.9580015!2d-15.8226832" target="_blank">
+      <i class="fas fa-home"></i>
+      <h4>{{ endereco }}</h4>
+    </a>
+    </div>
+    <div [hidden]="celular">
+      <a href="https://www.facebook.com/toyolages/?hc_ref=ARSnTtfzANPSqqL0tyIFweaUG6WpyiQn3wykcQe6TT0Zzh23iFxD2IYq3Y1XG8NbH2w&__xts__[0]=68.ARC57LQ3dX8vt3ZMGyHEN9QL7b1z7c4HF15xw10qk0vdCfQH6r_zS3c26iAfcaBd6wGiJXbTkauRlykBL8U_Y8kZfWKSSoxNWr1FfNFWca-4xCK9ZCvmsB0570c1LFAKpdySmkSL8eRNr34sGQB2Gzbo8Zvn2wzlstiAmAwZ2vZf8RNElCKYEQMqCNCZ2SSVAMJQLkZg0U7EPoYH1Ciz0n5JNvquxnkxgY_t4f5aUjoN4NJf8LW3JxLiM-O7tzQxThMfo-IBnw&__tn__=kC-R"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/toyolages_centroautomotivo?utm_source=ig_profile_share&igshid=16z9vxhtmh9xb"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg top" *ngIf="celular">
+  <div class="container">
+    <div class="primeiro">
+        <a href="tel:3233-4163"><i class="fa fa-phone"></i><h4>(61) 3233-4163</h4></a>  
+        <a href="tel:98625-6762"><i class="fab fa-whatsapp"></i><h4>(61) 9 8625-6762</h4></a>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg meio">
+  <div class="container">
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="col-6 navbar-brand">
+      <a href="http://www.toyolages.com.br/">
+        <img
+          src="http://www.toyolages.com.br/wp-content/uploads/2018/01/toyota_lages_n.png"
+          alt="Totolages"
+          class="img-fluid"
+          width="202"
+          height="60"
+        />
+      </a>
+    </div>
+    <div class="col-4">
+      <div class="titulo">
+        <i class="far fa-clock blue"></i> Horário de Funcionamento
+      </div>
+      <div class="subtitulo">Seg a Sex: 8h às 18h</div>
+      <div class="subtitulo">Sábado: 8h às 12h</div>
+    </div>
+    <div class="col-2">
+        <i class="btn btn-verde" href="#" role="button">
+            <i class="fab fa-whatsapp"></i>
+          (61) 9 8625-6762
+        </i>
+      <i class="btn btn-principal" href="#" role="button">
+        <i class="fa fa-phone"></i>
+        (61) 3233-4163
+      </i>
+     
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg menus" [collapse]="isCollapsed" >
+  <div class="navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/home" (click)="fecharMoblie()">PÁGINA PRINCIPAL</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/sobre" (click)="fecharMoblie()">SOBRE</a>
+      </li>
+      <li class="nav-item dropdown" routerLinkActive="active">
+        <a class="nav-link" routerLink="/funcionamento" (click)="fecharMoblie()">
+          SERVIÇOS
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/contato" (click)="fecharMoblie()">FALE CONOSCO</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<footer class="navbar navbar-expand-lg">
+  <div class="container">
+    <div class="col-6">
+      <img
+        src="http://www.toyolages.com.br/wp-content/uploads/2018/01/toyota_lages_n.png"
+      />
+    </div>
+    <div class="col-6 justify-content-end">
+      <div class="sociais">
+          <a href="https://www.facebook.com/toyolages/?hc_ref=ARSnTtfzANPSqqL0tyIFweaUG6WpyiQn3wykcQe6TT0Zzh23iFxD2IYq3Y1XG8NbH2w&__xts__[0]=68.ARC57LQ3dX8vt3ZMGyHEN9QL7b1z7c4HF15xw10qk0vdCfQH6r_zS3c26iAfcaBd6wGiJXbTkauRlykBL8U_Y8kZfWKSSoxNWr1FfNFWca-4xCK9ZCvmsB0570c1LFAKpdySmkSL8eRNr34sGQB2Gzbo8Zvn2wzlstiAmAwZ2vZf8RNElCKYEQMqCNCZ2SSVAMJQLkZg0U7EPoYH1Ciz0n5JNvquxnkxgY_t4f5aUjoN4NJf8LW3JxLiM-O7tzQxThMfo-IBnw&__tn__=kC-R"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/toyolages_centroautomotivo?utm_source=ig_profile_share&igshid=16z9vxhtmh9xb"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<nav class="navbar navbar-expand-lg ultimo" (window:resize)= fecharMoblie()>
+    <div class="container">
+      <div class="col-12">
+        © 1996 - 2019 Toyota Lages - A melhor Oficina. Todos os direitos reservados
+      </div>
+    </div>
+  </nav>

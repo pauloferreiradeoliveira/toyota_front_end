@@ -1,0 +1,66 @@
+<article class="top">
+  <div class="container">
+    <h2>{{ titulo }}</h2>
+  </div>
+</article>
+<article class="container">
+  <div class="col-sm-12 label-informcao panel-heading card-header accordion">
+    <label>Informações Gerais</label>
+  </div>
+  <form class="col-sm-12 label-informcao panel-heading card-header accordion" class="needs-validation" novalidate
+    [formGroup]="form" style="padding-top: 10px">
+    <div class="form-row">
+      <div class="col-sm-12 form-group">
+        <label for="nome">Nome do Serviço</label>
+        <input type="text" class="form-control" id="titulo" placeholder="Nome do Serviço" [ngClass]="{ 'is-invalid': submitted && hasError('titulo')}"  formControlName="titulo" />
+      </div>
+
+      <div class="col-sm-12 form-group ">
+        <label for="nome">Descrição do Serviço</label>
+        <ckeditor [editor]="Editor"  formControlName="descricao"></ckeditor>
+      </div>
+    </div>
+
+    <div class="col-sm-12 label-informcao outros panel-heading card-header accordion">
+      <label>Detalhamento das Informações</label>
+      <span class="float-right">
+        <button class="btn btn-success mb-1 btn-sm" (click)="addSubServico(null)">
+          <i class="fas fa-plus"></i> Adicionar Informação
+        </button>
+      </span>
+    </div>
+
+    <div formArrayName="subServicos" class="col-sm-12">
+
+
+      <div *ngFor="let address of aliases.controls; let i=index">
+        <div [formGroupName]='i' class="infomacao">
+          <div class="col-sm-12 form-group">
+            <label> Nome: </label>
+            <span class="float-right">
+              <button class="btn btn-danger mb-1 btn-sm" (click)="removeSubServico(i)">
+                <i class="fas fa-trash"></i>
+              </button>
+            </span>
+            <input class="form-control" type="text" formControlName="titulo">
+          </div>
+          <div class="col-sm-12 form-group">
+            <label> Descrição: </label>
+            <ckeditor [editor]="Editor"  formControlName="descricao"></ckeditor>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px">
+      <span class="float-right">
+        <button type="button" class="btn btn-primary" (click)="salvar()"><i class="fas fa-save"></i> Salvar</button>
+
+        <button type="button" class="btn btn-danger">Cancelar</button>
+      </span>
+    </div>
+  </form>
+</article>
+
+

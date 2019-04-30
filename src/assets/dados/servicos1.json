@@ -1,0 +1,21 @@
+{
+  "id": 1,
+  "titulo": "Balanceamento",
+  "descricao": "Balanceamento de um pneu permite que a roda gire sem provocar vibrações nos veículos em determinadas velocidades",
+  "subServicos": [
+    {
+      "titulo": "Problemas Causados",
+      "descricao": "<p>É o desequilíbrio das rodas e pneus, é o principal causador de vibrações no volante. Isto é causado pelo fato que o pneu nunca tem uma distribuição de borracha uniforme em sua circunferência. </p><p>O desbalanceamento causa desgaste irregular chamado multi-escavado, na região em que se encontra a maior concentração de massa, perda de tração e desconforto.</p><p>O fenômeno de vibração do pneu manifesta-se a cada giro da roda. Sua intensidade e frequência aumentam proporcionalmente a velocidade de rotação.<p>"
+    },
+    {
+      "titulo": "O que é ?",
+      "descricao": "<p>Como a roda não tem uma distribuição uniforme, o balanceamento compensa através de contrapesos (chumbo na roda) o equilíbrio do conjunto de rotação.</p><p>Ao montar um conjunto de rodas duplas, devemos sempre observar a colocação das válvulas, que deverão situar-se uma oposta à outra. A fim de proporcionar melhor distribuição das massas, evitando, desta forma, um possível desbalanceamento.</p>"
+    },
+    {
+      "titulo": "Quanto tempo demora?",
+      "video": "",
+      "imagens": "",
+      "descricao": ""
+    }
+  ]
+}
