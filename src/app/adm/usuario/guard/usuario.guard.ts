@@ -19,7 +19,8 @@ export class UsuarioGuard implements Resolve<Usuario> {
     return of({
       id: null,
       nome: null,
-      senha:  null
+      senha:  null,
+      adm: false
     });
   }
 

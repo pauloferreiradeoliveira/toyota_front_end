@@ -37,7 +37,8 @@ export class FormUsuarioComponent implements OnInit {
     this.formulario = this.formBuilder.group({
       id: usuario.id,
       nome: [usuario.nome, Validators.required],
-      senha: [usuario.senha, Validators.required]
+      senha: [usuario.senha, Validators.required],
+      adm: [usuario.adm]
     });
 
   }

@@ -3,7 +3,7 @@
     <h2>{{ titulo }}</h2>
   </div>
 </article>
-<article class="container">
+<article class="container meio">
   <div class="col-sm-12 label-informcao panel-heading card-header accordion">
     <label>Informações Gerais</label>
   </div>
@@ -31,9 +31,7 @@
     </div>
 
     <div formArrayName="subServicos" class="col-sm-12">
-
-
-      <div *ngFor="let address of aliases.controls; let i=index">
+      <div *ngFor="let address of aliases.controls; let i=index" class="form-row">
         <div [formGroupName]='i' class="infomacao">
           <div class="col-sm-12 form-group">
             <label> Nome: </label>
@@ -53,13 +51,14 @@
       </div>
     </div>
 
-    <div style="margin-top: 20px">
+    <div style="margin-top: 20px ; height: 42px ;">
       <span class="float-right">
         <button type="button" class="btn btn-primary" (click)="salvar()"><i class="fas fa-save"></i> Salvar</button>
 
         <button type="button" class="btn btn-danger">Cancelar</button>
       </span>
     </div>
+
   </form>
 </article>
 

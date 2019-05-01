@@ -17,10 +17,6 @@ export class FuncionamentoService extends CrudService<Servicos> {
     super(http, `${environment.API}servicos`);
   }
 
-  updates(record: Servicos) {
-    return this.http.put(`${environment.API}servicos/${record.id}`, record).pipe(take(1));
-  }
-
   /*
   list() {
     return this.http.get<Servicos[]>('assets/dados/servicos.json')
