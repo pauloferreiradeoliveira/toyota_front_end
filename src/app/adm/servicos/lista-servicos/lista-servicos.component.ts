@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Observable, EMPTY } from 'rxjs';
 import { Servicos } from 'src/app/class/servico.class';
 ;
@@ -6,6 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AlertService } from 'src/app/shared/alert.service';
 import { take, switchMap } from 'rxjs/operators';
 import { FuncionamentoService } from 'src/app/servico/funcionamento.service';
+import { text } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-lista-servicos',
@@ -16,6 +17,7 @@ import { FuncionamentoService } from 'src/app/servico/funcionamento.service';
 export class ListaServicosComponent implements OnInit {
 
   servicos$: Observable<Servicos[]>;
+  texto = [' Adicionar novo serviço', ' Atualizar', ' Remover'];
 
   constructor(
     private servicosService: FuncionamentoService,
@@ -26,10 +28,22 @@ export class ListaServicosComponent implements OnInit {
 
   ngOnInit() {
     this.reload();
+    if (window.screen.width < 992) {
+      this.texto = ['', '', ''];
+    }
   }
 
   private reload() {
     this.servicos$ = this.servicosService.list();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if (event.target.innerWidth < 992) {
+      this.texto = ['', '', ''];
+    } else {
+      this.texto = [' Adicionar novo serviço', ' Atualizar', ' Remover'];
+    }
   }
 
   onEdit(id) {
@@ -37,8 +51,6 @@ export class ListaServicosComponent implements OnInit {
   }
 
   onDelete(servico: Servicos) {
-
-
     const result$ = this.alert.showConfirm('Confirmação', `Tem certeza que deseja remover ${servico.titulo} ?`);
     result$.asObservable()
       .pipe(

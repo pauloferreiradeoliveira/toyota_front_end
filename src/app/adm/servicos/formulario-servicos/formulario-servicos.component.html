@@ -25,7 +25,7 @@
       <label>Detalhamento das Informações</label>
       <span class="float-right">
         <button class="btn btn-success mb-1 btn-sm" (click)="addSubServico(null)">
-          <i class="fas fa-plus"></i> Adicionar Informação
+          <i class="fas fa-plus"></i> Adicionar
         </button>
       </span>
     </div>
@@ -44,7 +44,7 @@
           </div>
           <div class="col-sm-12 form-group">
             <label> Descrição: </label>
-            <ckeditor [editor]="Editor"  formControlName="descricao"></ckeditor>
+            <ckeditor [editor]="Editor"   formControlName="descricao"></ckeditor>
           </div>
 
         </div>
@@ -55,7 +55,7 @@
       <span class="float-right">
         <button type="button" class="btn btn-primary" (click)="salvar()"><i class="fas fa-save"></i> Salvar</button>
 
-        <button type="button" class="btn btn-danger">Cancelar</button>
+        <button type="button" class="btn btn-danger" (click)="onCancel()">Cancelar</button>
       </span>
     </div>
 

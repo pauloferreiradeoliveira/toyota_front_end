@@ -38,7 +38,7 @@ export class FormUsuarioComponent implements OnInit {
       id: usuario.id,
       nome: [usuario.nome, Validators.required],
       senha: [usuario.senha, Validators.required],
-      adm: [usuario.adm]
+      adm: [usuario.adm, Validators.required]
     });
 
   }
@@ -77,6 +77,7 @@ export class FormUsuarioComponent implements OnInit {
   onCancel() {
     this.submitted = false;
     this.formulario.reset();
+    this.location.back();
     // console.log('onCancel');
   }
 

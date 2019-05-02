@@ -3,15 +3,15 @@
     <h2>Lista de Serviços</h2>
   </div>
 </article>
-<article class="container">
 
+<article class="container meio">
   <div *ngIf="(servicos$ | async) as servicos; else loading">
-    <div class="col-sm-12 label-informcao panel-heading card-header">
+    <div class="col-sm-12 label-informcao panel-heading card-header titulo">
       <label>Lista de Serviços Realizado</label>
       <div class="float-right">
         <button type="button" class="btn btn-primary mb-1 btn-sm" [routerLink]="['novo']"><i class="fas fa-plus"></i>
-          Novo
-          Serviço</button>
+          {{ texto[0] }}
+        </button>
       </div>
     </div>
 
@@ -19,19 +19,22 @@
     <div class="panel-heading card-header accordion" *ngFor="let servico of servicos">
       <label>{{ servico.titulo }}</label>
       <span class="float-right">
-          <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onEdit(servico.id)">
-              <i class="fas fa-edit"></i> Atualizar
-          </button>
+        <button class="btn btn-warning mb-1 btn-sm" (click)="onEdit(servico.id)">
+          <i class="fas fa-edit"></i> {{ texto[1] }}
+        </button>
 
-          <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(servico)">
-              <i class="fas fa-trash"></i> Remover
-          </button>
-        </span>
+        <button class="btn btn-danger mb-1 btn-sm" (click)="onDelete(servico)">
+          <i class="fas fa-trash"></i> {{ texto[2] }}
+        </button>
+      </span>
     </div>
   </div>
 
 
   <ng-template #loading>
-    <i class="fas fa-spinner fa-pulse"></i><span> Carregando Cursos...</span>
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border text-danger" role="status" style="width: 3rem; height: 3rem;">
+      </div>
+    </div>
   </ng-template>
 </article>

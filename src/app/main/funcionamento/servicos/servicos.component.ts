@@ -13,7 +13,7 @@ export class ServicosComponent implements OnInit,OnDestroy {
 
   inscricao: Subscription;
   servicos: Servicos;
-  
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,

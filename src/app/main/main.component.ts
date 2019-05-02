@@ -34,7 +34,6 @@ export class MainComponent implements OnInit {
 
   fecharMoblie() {
     if (window.screen.width < 992) {
-      console.log("entrou");
       this.isCollapsed = true;
       this.celular = true;
       this.endereco = 'SOF Sul Quadra 9 Conj B Lote 5/7 DF';

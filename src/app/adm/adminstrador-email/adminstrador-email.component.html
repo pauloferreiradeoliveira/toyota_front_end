@@ -40,6 +40,10 @@
       </div>
     </div>
   </div>
+  <ng-template #loading>
+      <i class="fas fa-spinner fa-pulse"></i><span> Carregando ...</span>
+  </ng-template>
+
 </article>
 
 <ng-template #template>
@@ -52,18 +56,18 @@
   <form class="modal-body" [formGroup]="form">
     <div class="form-group">
       <label for="assunto">Assunto</label>
-      <input 
+      <input
         type="text"
-        class="form-control" 
-        id="assunto" 
-        [ngClass]="{ 'is-invalid': submitted && hasError('assunto')}"  formControlName="assunto" 
+        class="form-control"
+        id="assunto"
+        [ngClass]="{ 'is-invalid': submitted && hasError('assunto')}"  formControlName="assunto"
        />
     </div>
     <div class="form-group">
       <label for="mensagem">Mensagem</label>
-      <textarea 
+      <textarea
         class="form-control"
-        [ngClass]="{ 'is-invalid': submitted && hasError('mensagem')}"  formControlName="mensagem" 
+        [ngClass]="{ 'is-invalid': submitted && hasError('mensagem')}"  formControlName="mensagem"
         id="mensagem"
         rows="3"></textarea>
       <div class="d-flex justify-content-end">
@@ -74,6 +78,3 @@
   </form>
 </ng-template>
 
-<ng-template #loading>
-    <i class="fas fa-spinner fa-pulse"></i><span> Carregando Emails ...</span>
-</ng-template>

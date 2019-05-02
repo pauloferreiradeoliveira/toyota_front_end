@@ -19,8 +19,10 @@
           <h5><span>Messagem:</span>{{ l.contado.mensagem }}</h5>
     </accordion-group>
   </accordion>
+
+  <ng-template #loading>
+      <i class="fas fa-spinner fa-pulse"></i><span> Carregando ...</span>
+  </ng-template>
 </article>
 
-<ng-template #loading>
-    <i class="fas fa-spinner fa-pulse"></i><span> Carregando Emails ...</span>
-</ng-template>
+

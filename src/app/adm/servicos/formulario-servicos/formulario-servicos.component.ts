@@ -30,7 +30,7 @@ export class FormularioServicosComponent implements OnInit {
     private funcionamentoService: FuncionamentoService,
     private alertServico: AlertService,
     private location: Location
-    ) { }
+  ) { }
 
   ngOnInit() {
 
@@ -43,14 +43,16 @@ export class FormularioServicosComponent implements OnInit {
     this.form = this.formBuilder.group({
       id: servicos.id,
       titulo: [servicos.titulo, Validators.required],
-      descricao: [servicos.descricao],
+      descricao: [servicos.descricao, Validators.required],
       subServicos: this.formBuilder.array([
       ])
     });
 
-    servicos.subServicos.forEach(x => {
-      this.addSubServico(x);
-    });
+    if (servicos.subServicos) {
+      servicos.subServicos.forEach(x => {
+        this.addSubServico(x);
+      });
+    }
   }
 
   private subServicos(subServicos: SubServicos) {
@@ -58,12 +60,12 @@ export class FormularioServicosComponent implements OnInit {
       return this.formBuilder.group({
         titulo: [subServicos.titulo, Validators.required],
         descricao: [subServicos.descricao, Validators.required]
-      })
+      });
     }
     return this.formBuilder.group({
       titulo: ['', Validators.required],
       descricao: ['', Validators.required]
-    })
+    });
   }
 
   removeSubServico(i: number) {
@@ -115,6 +117,7 @@ export class FormularioServicosComponent implements OnInit {
   onCancel() {
     this.submitted = false;
     this.form.reset();
+    this.location.back();
     // console.log('onCancel');
   }
 

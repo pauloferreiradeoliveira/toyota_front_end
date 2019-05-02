@@ -17,22 +17,22 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent" [collapse]="isCollapsed">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item"  routerLinkActive="active">
-        <a class="nav-link" routerLink="/adm/servicos">Serviços</a>
+        <a class="nav-link" routerLink="/adm/servicos" (click)="isCollapsed = !isCollapsed">Serviços</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="/adm/responder">Contatos</a>
+        <a class="nav-link" routerLink="/adm/responder" (click)="isCollapsed = !isCollapsed">Contatos</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" routerLink="/adm/email">Email Enviados</a>
+          <a class="nav-link" routerLink="/adm/email" (click)="isCollapsed = !isCollapsed">Email Enviados</a>
         </li>
       <li class="nav-item" *ngIf="adm()">
-        <a class="nav-link" routerLink="/adm/usuario">Usuários</a>
+        <a class="nav-link" routerLink="/adm/usuario" (click)="isCollapsed = !isCollapsed">Usuários</a>
       </li>
 
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" (click)="sair()">Sair</button>
+      <button class="btn btn-danger my-2 my-sm-0" type="submit" (click)="sair()"><i class="fas fa-sign-out-alt"></i> Sair</button>
     </form>
   </div>
 </nav>
@@ -42,5 +42,6 @@
 </main>
 
 <footer class="navbar  navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" >Toyota Lajes</a>
+    <a class="navbar-brand" >TOYOTA LAJES</a>
+    Centro Automotivo
 </footer>

@@ -11,10 +11,16 @@ import { CrudService } from './crud.service';
 })
 export class FuncionamentoService extends CrudService<Servicos> {
 
-  private lugar = 'assets/dados/sobre.json';
-
   constructor(protected http: HttpClient) {
     super(http, `${environment.API}servicos`);
+  }
+
+  list(): Observable<Servicos[]> {
+    return this.http.get<Servicos[]>(`${environment.API}servicos`)
+      .pipe(
+        take(1),
+        map(x => x.sort((x , y) => x.titulo < y.titulo ? -1 : 1))
+        );
   }
 
   /*

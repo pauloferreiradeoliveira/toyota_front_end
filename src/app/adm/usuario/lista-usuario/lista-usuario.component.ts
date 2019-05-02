@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Observable, EMPTY } from 'rxjs';
 import { Usuario } from 'src/app/class/usuario.class';
 import { UsuarioService } from 'src/app/servico/usuario.service';
@@ -14,6 +14,7 @@ import { take, switchMap } from 'rxjs/operators';
 export class ListaUsuarioComponent implements OnInit {
 
   usuario$: Observable<Usuario[]>;
+  texto = [' Adicionar novo usuário', ' Atualizar', ' Desativar', ' Ativar'];
 
   constructor(
     private usuarioService: UsuarioService,
@@ -24,6 +25,18 @@ export class ListaUsuarioComponent implements OnInit {
 
   ngOnInit() {
     this.reload();
+    if (window.screen.width < 992) {
+      this.texto = ['', '', '', ''];
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if (event.target.innerWidth < 992) {
+      this.texto = ['', '', '', ''];
+    } else {
+      this.texto = [' Adicionar novo usuário', ' Atualizar', ' Desativar', ' Ativar'];
+    }
   }
 
   private reload() {
