@@ -11,7 +11,7 @@ import { text } from '@angular/core/src/render3';
 @Component({
   selector: 'app-lista-servicos',
   templateUrl: './lista-servicos.component.html',
-  styleUrls: ['./lista-servicos.component.sass'],
+  styleUrls: ['./lista-servicos.component.scss'],
   preserveWhitespaces: true
 })
 export class ListaServicosComponent implements OnInit {

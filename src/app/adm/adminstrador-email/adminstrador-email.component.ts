@@ -12,7 +12,7 @@ import { RespostaContadoService } from 'src/app/servico/resposta-contado.service
 @Component({
   selector: 'app-adminstrador-email',
   templateUrl: './adminstrador-email.component.html',
-  styleUrls: ['./adminstrador-email.component.sass']
+  styleUrls: ['./adminstrador-email.component.scss']
 })
 export class AdminstradorEmailComponent implements OnInit {
 
@@ -85,7 +85,7 @@ export class AdminstradorEmailComponent implements OnInit {
     this.submitted = true;
     if (this.form.valid) {
       const alert$ = this.alert.showAlertLoading('Enviado os dados');
- 
+
 
       this.respostaService.save(this.form.value).subscribe(
         success => {

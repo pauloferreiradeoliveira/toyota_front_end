@@ -9,7 +9,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-form-usuario',
   templateUrl: './form-usuario.component.html',
-  styleUrls: ['./form-usuario.component.sass'],
+  styleUrls: ['./form-usuario.component.scss'],
   preserveWhitespaces: true
 })
 export class FormUsuarioComponent implements OnInit {

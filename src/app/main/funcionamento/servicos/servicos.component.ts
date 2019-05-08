@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-servicos',
   templateUrl: './servicos.component.html',
-  styleUrls: ['./servicos.component.sass']
+  styleUrls: ['./servicos.component.scss']
 })
 export class ServicosComponent implements OnInit,OnDestroy {
 

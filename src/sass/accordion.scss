@@ -1,0 +1,45 @@
+@import 'all';
+
+$sizeBorder: 5px;
+
+.accordion {
+    width: 100%;
+
+    .card-header {
+        border-left: $sizeBorder solid $corf1;
+        transition-duration: 0.5s;
+    }
+
+    .card-header:hover {
+        border-left: $sizeBorder solid $corprimario;
+
+        button {
+            color: $corprimario;
+            text-decoration: none;
+        }
+    }
+
+    .panel-open {
+        .card-header {
+            border-left: $sizeBorder solid $corprimario
+        }
+
+        button {
+            color: $corprimario;
+            text-decoration: none;
+        }
+    }
+
+    button {
+        color: $corTexto;
+        font-family: $fontTitulo;
+    }
+
+    .panel-body {
+        font-size: 1rem;
+        color: $corTexto;
+        font-family: $fontNormal;
+        @include texto();
+    }
+
+}

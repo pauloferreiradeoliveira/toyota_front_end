@@ -7,7 +7,7 @@ import { SobreService } from './../../servico/sobre.service';
 @Component({
   selector: 'app-sobre',
   templateUrl: './sobre.component.html',
-  styleUrls: ['./sobre.component.sass']
+  styleUrls: ['./sobre.component.scss']
 })
 export class SobreComponent implements OnInit {
   service: Observable<Sobre>;

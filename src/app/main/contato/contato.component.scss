@@ -1,0 +1,22 @@
+@import 'top';
+@import 'all';
+
+.sobre {
+    margin-bottom: 2rem;
+
+    p {
+       @include texto();
+        color: $corTexto;
+    }
+
+    h4 {
+        color: $corTexto;
+        font-family: $fontTitulo;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+button {
+    margin-left: 2px
+}

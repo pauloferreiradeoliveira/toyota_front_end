@@ -1,0 +1,37 @@
+@import 'all';
+
+.vermelho {
+    a {
+        background-color: $corprimario
+    }
+}
+
+h4 {
+    color: $corTexto;
+    font-family: $fontTitulo;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+p {
+    margin-top: 2rem;
+    @include texto();
+    font-size: 1rem;
+    color: $corTexto;
+}
+
+img {
+    width: 100%;
+
+    @media (min-width: 992px) {
+        width: 75%;
+        margin-left: 12.5%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    main {
+        margin-bottom: 5rem;
+    }
+}

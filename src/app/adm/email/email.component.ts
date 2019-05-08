@@ -6,7 +6,7 @@ import { Resposta } from 'src/app/class/resposta.class';
 @Component({
   selector: 'app-email',
   templateUrl: './email.component.html',
-  styleUrls: ['./email.component.sass']
+  styleUrls: ['./email.component.scss']
 })
 export class EmailComponent implements OnInit {
 

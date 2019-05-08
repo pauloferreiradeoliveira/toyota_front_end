@@ -1,0 +1,14 @@
+@mixin fundoImage(){
+  background-image: url("src/assets/blue_pttrn.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+@mixin texto(){
+  text-indent: 10px;
+  font-family: $fontNormal;
+  text-align: justify;
+  line-height: 1.8;
+}

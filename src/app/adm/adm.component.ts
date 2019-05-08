@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-adm',
   templateUrl: './adm.component.html',
-  styleUrls: ['./adm.component.sass']
+  styleUrls: ['./adm.component.scss']
 })
 export class AdmComponent implements OnInit {
 

@@ -1,0 +1,19 @@
+@import 'top';
+@import 'all';
+
+.sobre {
+    p {
+        @include texto();
+    }
+
+    h4 {
+        color: $corTexto;
+        font-family: $fontTitulo;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+article {
+    margin-bottom: 2rem
+}

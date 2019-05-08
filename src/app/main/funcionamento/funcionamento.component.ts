@@ -9,7 +9,7 @@ import { FuncionamentoService } from 'src/app/servico/funcionamento.service';
 @Component({
   selector: 'app-funcionamento',
   templateUrl: './funcionamento.component.html',
-  styleUrls: ['./funcionamento.component.sass']
+  styleUrls: ['./funcionamento.component.scss']
 })
 export class FuncionamentoComponent implements OnInit {
 

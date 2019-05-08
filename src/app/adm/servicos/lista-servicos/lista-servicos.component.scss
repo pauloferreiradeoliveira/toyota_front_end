@@ -1,0 +1,52 @@
+@import 'top';
+@import 'all';
+
+.titulo {
+    margin-bottom: 1rem
+}
+
+.meio {
+    min-height: 80%
+}
+
+.accordion {
+    width: 100%;
+    border-left: $sizeBorder solid $corf1;
+    font-family: $fontNormal
+
+    label {
+        font-family: $fontTitulo;
+    }
+}
+
+span,
+h4 {
+    color: $corTexto;
+    font-family: $fontNormal
+}
+
+p {
+    @include texto();
+}
+
+.email {
+    background-color: rgba(0, 0, 0, .03);
+    border-left: 5px solid #223643;
+    font-family: $fontNormal;
+    padding: 1rem;
+}
+
+button {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.label-informcao {
+    border-left: $sizeBorder solid $corprimario;
+    width: 100%;
+
+    label {
+        color: $corprimario;
+        font-family: $fontTitulo;
+    }
+}

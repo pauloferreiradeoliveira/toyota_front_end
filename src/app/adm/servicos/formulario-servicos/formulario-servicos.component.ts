@@ -14,7 +14,7 @@ import { FuncionamentoService } from 'src/app/servico/funcionamento.service';
 @Component({
   selector: 'app-formulario-servicos',
   templateUrl: './formulario-servicos.component.html',
-  styleUrls: ['./formulario-servicos.component.sass'],
+  styleUrls: ['./formulario-servicos.component.scss'],
   preserveWhitespaces: true
 })
 export class FormularioServicosComponent implements OnInit {

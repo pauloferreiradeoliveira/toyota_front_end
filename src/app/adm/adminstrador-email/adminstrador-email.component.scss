@@ -1,0 +1,60 @@
+@import 'top';
+@import 'all';
+
+.col-12 {
+    margin-bottom: 1rem
+}
+
+.accordion {
+    width: 100%;
+    border-left: $sizeBorder solid $corf1;
+
+    a {
+        color: $corTexto;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+.accordion:hover {
+    border-left: $sizeBorder solid $corprimario a {
+        color: $corprimario
+    }
+}
+
+.active {
+    border-left: $sizeBorder solid $corprimario a {
+        color: $corprimario
+    }
+}
+
+span,
+h4 {
+    color: #222
+}
+
+p {
+    @include texto();
+}
+
+.email {
+    background-color: rgba(0, 0, 0, .03);
+    border-left: 5px solid #223643;
+    font-family: $fontNormal;
+    padding: 1rem
+}
+
+button {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.label-informcao {
+    border-left: $sizeBorder solid $corprimario;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    label {
+        color: $corprimario;
+        font-family: $fontTitulo;
+    }
+}

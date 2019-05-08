@@ -8,13 +8,13 @@ import { ContadoService } from 'src/app/servico/contado.service';
 @Component({
   selector: 'app-contato',
   templateUrl: './contato.component.html',
-  styleUrls: ['./contato.component.sass']
+  styleUrls: ['./contato.component.scss']
 })
 export class ContatoComponent implements OnInit {
 
   form: FormGroup;
   submitted = false;
-  
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,

@@ -1,0 +1,32 @@
+@import 'top';
+@import 'vars';
+
+.outros {
+    height: 5.5rem;
+
+    @media (min-width: 992px) {
+        height: 3.5rem
+    }
+}
+
+.infomacao {
+    border: 1px solid #ced4da;
+    margin-top: 1rem;
+    padding: 0.7rem 0.1rem;
+    width: 100%;
+
+    span {
+        margin-top: -0.3rem;
+        margin-right: -0.4rem;
+    }
+}
+
+.label-informcao {
+    border-left: $sizeBorder solid $corprimario;
+    width: 100%;
+
+    label {
+        color: $corprimario;
+        font-family: $fontTitulo;
+    }
+}

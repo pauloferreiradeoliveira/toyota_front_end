@@ -9,7 +9,7 @@ import { take, switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-lista-usuario',
   templateUrl: './lista-usuario.component.html',
-  styleUrls: ['./lista-usuario.component.sass']
+  styleUrls: ['./lista-usuario.component.scss']
 })
 export class ListaUsuarioComponent implements OnInit {
 

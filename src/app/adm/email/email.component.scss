@@ -1,0 +1,18 @@
+@import 'top';
+@import 'vars';
+
+h4 {
+    color: #000;
+    font-family: $fontTitulo;
+    margin-top: 1rem
+}
+
+h5 {
+    font-family: $fontNormal;
+
+    span {
+        font-size: 1rem;
+        margin-right: 0.2rem;
+        color: #bbb;
+    }
+}

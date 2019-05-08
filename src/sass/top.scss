@@ -1,0 +1,33 @@
+@import 'vars';
+
+.top {
+    background-color: #eeeeee;
+    border-color: #e1e1e1;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+
+    @media (min-width: 900px) {
+        margin-bottom: 2rem;
+        padding-top: 3.5rem;
+        padding-bottom: 1.94444rem;
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        color: #333333;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #d9d9d9
+    }
+
+    h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem
+    }
+
+    .container {
+        margin-top: 1rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
