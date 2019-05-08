@@ -20,9 +20,8 @@
   </div>
   <div class="col-12 " *ngIf="( servicos$ | async) as servicos; else loading">
     <div class="botoes">
-      <button (click)="rigth()">
-        < </button> <button (click)="left()" style="float: right"> >
-      </button>
+      <button (click)="rigth()"><i class="fas fa-angle-left"></i></button>
+      <button (click)="left()" style="float: right"><i class="fas fa-angle-right"></i></button>
     </div>
     <div class="scrolling-wrapper" #test>
       <div class="card col-10 col-md-4" (click)="passarServico(servico.id)" *ngFor="let servico of servicos">
