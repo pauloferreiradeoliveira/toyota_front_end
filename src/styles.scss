@@ -7,7 +7,9 @@
 @import 'vars';
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+@import url('https://fonts.googleapis.com/css?family=Lato:900');
+
 
 body,
 html {
@@ -16,9 +18,9 @@ html {
     max-width: 100%;
 }
 
-@viewport{
-  width: device-width;
-  zoom: 1;
+@viewport {
+    width: device-width;
+    zoom: 1;
 }
 
 
@@ -32,39 +34,31 @@ html {
     font-style: normal;
     font-size: .8rem;
 
-    i{
-        margin-right:  0.2rem;
-      }
+    i {
+        margin-right: 0.2rem;
+    }
+
+    &:hover {
+        color: #fff;
+    }
+
+    @media (min-width: 900px){
+      font-size: .73rem;
+    }
+
+    @media (min-width: 1200px){
+      font-size: .8rem;
+      padding: .55rem .9rem;
+    }
 }
 
 .btn-principal {
-  @include botao(#2fb8eb);
+    @include botao(#2fb8eb);
 }
 
-.btn-verde{
-  @include botao(#25d366)
+.btn-verde {
+    @include botao(#25d366)
 }
 
 
-@media (min-width: 900px){
 
-    .btn-principal{
-        font-size: .7rem;
-    }
-
-    .btn-verde{
-        font-size: .7rem;
-    }
-}
-
-@media (min-width: 1200px){
-
-    .btn-principal{
-        font-size: .8rem;
-    }
-
-    .btn-verde{
-        font-size: .8rem;
-    }
-
-}

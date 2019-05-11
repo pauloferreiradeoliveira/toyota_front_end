@@ -11,10 +11,10 @@ $sizeBorder: 5px;
     }
 
     .card-header:hover {
-        border-left: $sizeBorder solid $corprimario;
+        border-left: $sizeBorder solid lighten( $corprimario, 10%);
 
         button {
-            color: $corprimario;
+            color: lighten( $corprimario, 10%);
             text-decoration: none;
         }
     }

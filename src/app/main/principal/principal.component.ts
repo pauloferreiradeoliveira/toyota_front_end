@@ -36,7 +36,7 @@ export class PrincipalComponent implements OnInit {
   ngOnInit() {
     this.getSobre();
     this.imagens = this.sobreSevice.getImagens();
-    this.imagensCar = ['assets/slider1.jpg', 'assets/slider2.jpg'];
+    this.imagensCar = ['assets/silde1.jpeg', 'assets/silde2.jpeg', 'assets/silde3.jpeg'];
   }
 
   private getSobre(): void {
@@ -56,7 +56,7 @@ export class PrincipalComponent implements OnInit {
     this.movimentar(300, true);
   }
 
-  private movimentar(numb: number,g: boolean) {
+  private movimentar(numb: number, g: boolean) {
     let i: number;
     if (g) {
       i = this.myDivElementRef.nativeElement.scrollLeft - numb;

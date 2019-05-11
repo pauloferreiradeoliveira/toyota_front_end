@@ -1,9 +1,19 @@
-@mixin fundoImage(){
-  background-image: url("src/assets/blue_pttrn.jpg");
+@mixin f {
   background-repeat: no-repeat;
   background-position: top left;
   background-attachment: scroll;
   background-size: cover;
+
+}
+
+@mixin fundoImage(){
+  background-image: url("src/assets/blue_pttrn.jpg");
+  @include f();
+}
+
+@mixin FundoImagemBranco {
+  background-image: url("src/assets/fundoBranco.jpg");
+  @include f();
 }
 
 @mixin texto(){

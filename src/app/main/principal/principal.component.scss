@@ -35,11 +35,13 @@ article {
             width: 3rem;
             font-weight: 1000;
             height: 100%;
+
+            &:hover {
+                opacity: 0.5
+            }
         }
 
-        &:hover {
-            opacity: 0.5
-        }
+
     }
 }
 
@@ -79,7 +81,7 @@ article {
         }
     }
 
-    &:hover {
+    .card:hover {
         background-image: none;
         background-color: #fff;
         color: $corfundo;
@@ -133,19 +135,15 @@ p {
         h5 {
             font-size: 4rem;
             font-weight: 600;
+            font-family: $fontTitulo
         }
 
         h6 {
+            font-family: $fontTitulo;
             font-size: 3rem;
         }
 
-        h2 {
-            font-family: $fontTitulo;
-            color: $corTexto;
-            font-size: 1.66667rem;
-            font-weight: 900;
-            margin-bottom: 2rem;
-        }
+
     }
 
     .imagens {
@@ -174,7 +172,11 @@ p {
 }
 
 .dados {
-    margin: 4rem 0.2rem
+
+    padding: 4rem 1rem;
+    margin-right: 0 !important;
+
+
 }
 
 .fundo {

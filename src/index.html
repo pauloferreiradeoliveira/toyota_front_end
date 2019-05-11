@@ -1,28 +1,103 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
-  <title>Toyota</title>
+  <title>Toyota Lages - Sua oficina mecanica em Brasilia </title>
   <base href="/">
-  <meta name="description" content="Oficina Toyota Brasilia. Toda a qualidade dos serviços Toyota exclusivos pra você, assistência técnica ha todos carros da Marca Toyota Brasil e Toyota Internacional. Fazemos revisões periódicas, alinhamento, balanceamento entre outros serviços. Confira todos nossos serviços."/>
+  <meta name="description"
+    content="Oficina Toyota Brasilia. Toda a qualidade dos serviços Toyota exclusivos pra você, assistência técnica ha todos carros da Marca Toyota Brasil e Toyota Internacional. Fazemos revisões periódicas, alinhamento, balanceamento entre outros serviços. Confira todos nossos serviços." />
   <link rel="canonical" href="http://www.toyolages.com.br/" />
 
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Oficina Toyota Brasilia - Toyota Lages" />
-  <meta property="og:description" content="Oficina Toyota Brasilia. Toda a qualidade dos serviços Toyota exclusivos pra você, assistência técnica ha todos carros da Marca Toyota Brasil e Toyota Internacional. Fazemos revisões periódicas, alinhamento, balanceamento entre outros serviços. Confira todos nossos serviços." />
+  <meta property="og:title" content="Toyota Lages" />
+  <meta property="og:description"
+    content="Oficina Toyota Brasilia. Toda a qualidade dos serviços Toyota exclusivos pra você, assistência técnica ha todos carros da Marca Toyota Brasil e Toyota Internacional. Fazemos revisões periódicas, alinhamento, balanceamento entre outros serviços. Confira todos nossos serviços." />
   <meta property="og:url" content="http://www.toyolages.com.br/" />
-  <meta property="og:site_name" content="My Blog" />
+  <meta property="og:site_name" content="Toyota Lages" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" content="Oficina Toyota Brasilia. Toda a qualidade dos serviços Toyota exclusivos pra você, assistência técnica ha todos carros da Marca Toyota Brasil e Toyota Internacional. Fazemos revisões periódicas, alinhamento, balanceamento entre outros serviços. Confira todos nossos serviços." />
+  <meta name="twitter:description"
+    content="Oficina Toyota Brasilia. Toda a qualidade dos serviços Toyota exclusivos pra você, assistência técnica ha todos carros da Marca Toyota Brasil e Toyota Internacional. Fazemos revisões periódicas, alinhamento, balanceamento entre outros serviços. Confira todos nossos serviços." />
   <meta name="twitter:title" content="Oficina Toyota Brasilia - Toyota Lages (Antiga Toyolages)" />
-  <meta name="twitter:image" content="http://www.toyolages.com.br/wp-content/uploads/2018/01/Melhor-oficina-mecânica-de-Brasília-1-300x150.jpg" />
+  <meta name="twitter:image"
+    content="http://www.toyolages.com.br/wp-content/uploads/2018/01/Melhor-oficina-mecânica-de-Brasília-1-300x150.jpg" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link  rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- inline spinner styles to be able to display spinner right away -->
+  <style type="text/css">
+    body,
+    html {
+      height: 100%;
+    }
+
+    .app-loading {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .app-loading .spinner {
+      height: 200px;
+      width: 200px;
+      animation: rotate 2s linear infinite;
+      transform-origin: center center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .app-loading .spinner .path {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+      animation: dash 1.5s ease-in-out infinite;
+      stroke-linecap: round;
+      stroke: #D32F2F;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+      }
+
+      50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+      }
+
+      100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <app-root></app-root>
+  <app-root>
+    <div class="app-loading">
+      <div class="logo">Toyota Lages</div>
+      <svg class="spinner" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+      </svg>
+    </div>
+  </app-root>
 </body>
+
 </html>

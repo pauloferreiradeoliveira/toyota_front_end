@@ -15,19 +15,19 @@
     }
 
     h2 {
-        font-family: 'Montserrat', sans-serif;
-        color: #333333;
+        font-family: $fontTitulo;
+        color:$corTexto;
         padding-bottom: 1rem;
         border-bottom: 1px solid #d9d9d9
     }
 
     h3 {
-        font-family: 'Open Sans', sans-serif;
+        font-family: $fontNormal;
         font-size: 1.5rem
     }
 
     .container {
         margin-top: 1rem;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $fontNormal
     }
 }
