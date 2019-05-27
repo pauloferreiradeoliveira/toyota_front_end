@@ -1,18 +1,20 @@
-<main *ngIf="servicos">
+<main *ngIf="(  this.inscricao$ | async) as servicos; else loading">
   <h4>{{ servicos.titulo | uppercase  }}</h4>
   <p [innerHTML]="servicos.descricao" *ngIf="servicos.descricao"></p>
   <tabset [vertical]="true" type="pills" *ngIf="servicos.subServicos">
-    <tab
-      [heading]="s.titulo"
-      [id]="s.id"
-      customClass = "vermelho"
-      *ngFor="let s of servicos.subServicos"
-    >
+    <tab [heading]="s.titulo" [id]="s.id" customClass="vermelho" *ngFor="let s of servicos.subServicos">
       <h4>
         {{ s.titulo  | uppercase  }}
       </h4>
       <img [src]="s.imagens" *ngIf="s.imagens" />
-      <p [innerHTML]="s.descricao" *ngIf="s.descricao" ></p>
+      <p [innerHTML]="s.descricao" *ngIf="s.descricao"></p>
     </tab>
   </tabset>
 </main>
+
+<ng-template #loading>
+  <div class="d-flex justify-content-center" style="padding-top: 30px; padding-bottom: 30px">
+    <div class="spinner-border text-danger" role="status" style="width: 3rem; height: 3rem;">
+    </div>
+  </div>
+</ng-template>

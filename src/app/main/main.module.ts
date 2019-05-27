@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
 
-import { ContatoComponent } from './contato/contato.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { PrincipalComponent } from './principal/principal.component';
 
@@ -18,8 +16,7 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     MainComponent,
     PrincipalComponent,
-    SobreComponent,
-    ContatoComponent
+    SobreComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +24,6 @@ import { SharedModule } from '../shared/shared.module';
     CollapseModule.forRoot(),
     CarouselModule.forRoot(),
     AccordionModule.forRoot(),
-    ReactiveFormsModule,
     SharedModule
   ],
   providers: [],

@@ -20,7 +20,10 @@ export class FuncionamentoComponent implements OnInit {
 
   ngOnInit() {
     this.servicos$ = this.funcionamento.list();
+  }
 
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
 
 }

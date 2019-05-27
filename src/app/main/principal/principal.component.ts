@@ -1,13 +1,16 @@
 
 import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { Sobre } from './../../class/sobre.class';
+import { FuncionamentoService } from 'src/app/servico/funcionamento.service';
 import { SobreService } from './../../servico/sobre.service';
 import { AlertService } from 'src/app/shared/alert.service';
+
 import { Servicos } from 'src/app/class/servico.class';
-import { FuncionamentoService } from 'src/app/servico/funcionamento.service';
-import { Router } from '@angular/router';
+import { Sobre } from './../../class/sobre.class';
+
+
 
 @Component({
   selector: 'app-principal',
@@ -20,12 +23,10 @@ export class PrincipalComponent implements OnInit {
   @ViewChild('test') myDivElementRef: ElementRef;
 
   accordion = 'accordion';
-  titulo = 'Toyota Lages';
-  subtitulo = 'Centro Automotivo Especializado em Toyota';
   sobre: Observable<Sobre[]>;
   servicos$: Observable<Servicos[]>;
-  imagens: string[];
-  imagensCar: string[];
+  imagensLogos;
+  imagensCar =  ['assets/silde1.jpeg', 'assets/silde2.jpeg', 'assets/silde3.jpeg'];
 
   constructor(private sobreSevice: SobreService,
               private alert: AlertService,
@@ -35,8 +36,7 @@ export class PrincipalComponent implements OnInit {
 
   ngOnInit() {
     this.getSobre();
-    this.imagens = this.sobreSevice.getImagens();
-    this.imagensCar = ['assets/silde1.jpeg', 'assets/silde2.jpeg', 'assets/silde3.jpeg'];
+    this.imagensLogos = this.sobreSevice.getImagens();
   }
 
   private getSobre(): void {
@@ -44,7 +44,7 @@ export class PrincipalComponent implements OnInit {
     this.servicos$ = this.servicosSevicos.list();
   }
 
-  mostrar(url) {
+  mostrar(url): void {
     this.alert.showImagem(url);
   }
 
@@ -56,7 +56,8 @@ export class PrincipalComponent implements OnInit {
     this.movimentar(300, true);
   }
 
-  private movimentar(numb: number, g: boolean) {
+  // Para Poder Movimentar
+  private movimentar(numb: number, g: boolean): void {
     let i: number;
     if (g) {
       i = this.myDivElementRef.nativeElement.scrollLeft - numb;
@@ -68,7 +69,6 @@ export class PrincipalComponent implements OnInit {
 
   passarServico(id: number) {
     this.router.navigate([`funcionamento/${id}`]);
-
   }
 
 }

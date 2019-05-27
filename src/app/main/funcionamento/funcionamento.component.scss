@@ -13,9 +13,9 @@
 }
 
 .accordion:hover {
-    border-left: $sizeBorder solid $corprimario;
-
+    border-left: $sizeBorder solid lighten($corprimario, 10%) ;
     a {
+        text-decoration: none;
         color: $corprimario;
     }
 }

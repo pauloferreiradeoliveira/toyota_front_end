@@ -22,3 +22,40 @@
   text-align: justify;
   line-height: 1.8;
 }
+
+@mixin sombra(){
+  box-shadow: inset 0 -10px 10px -5px rgba(0, 0, 0, .06);
+}
+
+@mixin botao($cor) {
+  color: #fff;
+  font-weight: 700;
+  background-color: $cor;
+  border-color: $cor;
+  padding: .4rem .5rem;
+  border-radius: 2rem;
+  font-style: normal;
+  font-size: .8rem;
+
+  i {
+      margin-right: 0.2rem;
+  }
+
+  img{
+    height: 16px;
+    margin-right: 3px;
+  }
+
+  &:hover {
+      color: #fff;
+  }
+
+  @media (min-width: 900px){
+    font-size: .73rem;
+  }
+
+  @media (min-width: 1200px){
+    font-size: .8rem;
+    padding: .55rem .9rem;
+  }
+}

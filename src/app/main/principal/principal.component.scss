@@ -25,6 +25,11 @@ article {
         width: 97.8%;
         padding-right: 15px;
 
+        @media (min-width: 992px) {
+            padding-right: 0px;
+            width: 97.9%;
+        }
+
         button {
             z-index: 1;
             position: relative;
@@ -111,13 +116,38 @@ p {
     }
 }
 
-@media (min-width: 992px) {
-    .servicos {
-        .botoes {
-            padding-right: 0px;
-            width: 97.9%;
+.fotos {
+
+    h5 {
+        font-weight: 600;
+        font-family: $fontTitulo;
+
+
+        @media (min-width: 900px) {
+            font-size: 2.9rem;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 4rem;
         }
     }
+
+    h6 {
+        font-family: $fontTitulo;
+
+        @media (min-width: 900px) {
+          font-size: 2rem;
+      }
+
+      @media (min-width: 1200px) {
+          font-size: 2.7rem;
+      }
+    }
+
+
+}
+
+@media (min-width: 992px) {
 
     .scrolling-wrapper {
         .card {
@@ -129,22 +159,6 @@ p {
         }
     }
 
-
-
-    .bd-example {
-        h5 {
-            font-size: 4rem;
-            font-weight: 600;
-            font-family: $fontTitulo
-        }
-
-        h6 {
-            font-family: $fontTitulo;
-            font-size: 3rem;
-        }
-
-
-    }
 
     .imagens {
         img {

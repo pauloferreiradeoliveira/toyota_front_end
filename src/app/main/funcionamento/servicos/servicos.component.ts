@@ -1,38 +1,46 @@
-import { Component, OnInit, OnDestroy} from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { Servicos } from 'src/app/class/servico.class';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
+
+import { Observable, Subscription } from 'rxjs';
+
+import { FuncionamentoService } from 'src/app/servico/funcionamento.service';
+import { Servicos } from 'src/app/class/servico.class';
+
 
 @Component({
   selector: 'app-servicos',
   templateUrl: './servicos.component.html',
   styleUrls: ['./servicos.component.scss']
 })
-export class ServicosComponent implements OnInit,OnDestroy {
+export class ServicosComponent implements OnInit, OnDestroy {
 
-  inscricao: Subscription;
-  servicos: Servicos;
+  parms$: Subscription;
+  inscricao$: Observable<Servicos>;
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private funcionamentoService: FuncionamentoService
   ) { }
 
   ngOnInit() {
-    this.inscricao = this.route.data.subscribe(
-			(info: {servicos: Servicos}) => {
-				this.servicos = info.servicos;
-			}
-		);
+
+    this.parms$ = this.route.params
+      .subscribe(
+        x => {
+          this.inscricao$ = this.funcionamentoService.loadByID(x.id);
+        }
+      );
   }
 
   ngOnDestroy(): void {
-    this.inscricao.unsubscribe();
+    this.parms$.unsubscribe();
   }
 
-  getUrl(url: string){
+
+  getUrl(url: string) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
+
 }

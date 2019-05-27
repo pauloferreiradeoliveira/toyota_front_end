@@ -1,11 +1,11 @@
 <!-- Fotos -->
-<article class="bd-example ">
+<article class="fotos">
   <carousel [noPause]="true">
     <slide *ngFor="let imagem of imagensCar">
       <img [src]="imagem" alt="Images da Loja" style="display: block; width: 100%;"  rel="preload"/>
       <div class="carousel-caption d-none d-md-block">
-        <h5>{{ titulo | uppercase }}</h5>
-        <h6>{{ subtitulo  }}</h6>
+        <h5>TOYOTA LAGES</h5>
+        <h6>Centro Automotivo Especializado em Toyota</h6>
         <p>
           Trabalhamos com todas as marcas de automóveis.
         </p>
@@ -13,25 +13,24 @@
     </slide>
   </carousel>
 </article>
+<!-- Fim Fotos -->
 
+<!-- Começo Serviços -->
 <article class="servicos container-fluid">
   <div class="col-12 ">
     <h2>SERVIÇOS</h2>
   </div>
   <div class="col-12 " *ngIf="( servicos$ | async) as servicos; else loading">
     <div class="botoes">
-      <button (click)="rigth()"><i class="fas fa-angle-left"></i></button>
-      <button (click)="left()" style="float: right"><i class="fas fa-angle-right"></i></button>
+      <button (click)="rigth()" aria-hidden="true"><i class="fas fa-angle-left"></i></button>
+      <button (click)="left()" style="float: right" aria-hidden="true"><i class="fas fa-angle-right"></i></button>
     </div>
     <div class="scrolling-wrapper" #test>
       <div class="card col-10 col-md-4" (click)="passarServico(servico.id)" *ngFor="let servico of servicos">
         <p class="card-text"> {{ servico.titulo  | uppercase}}</p>
       </div>
     </div>
-
-
   </div>
-
   <ng-template #loading>
     <div class="d-flex justify-content-center">
       <div class="spinner-border text-danger" role="status" style="width: 3rem; height: 3rem;">
@@ -39,7 +38,9 @@
     </div>
   </ng-template>
 </article>
+<!-- Fim Serviços -->
 
+<!-- Sobre -->
 <article class="container-fluid">
   <div class="row dados">
     <div class="col-12 col-md-6" *ngFor="let s of (sobre | async)">
@@ -48,7 +49,7 @@
 
         <div class="row" *ngIf="s.imagem">
           <div class="col-6" *ngFor="let img of s.imagem">
-            <img [src]="img" alt="Images da Loja" class="img-fluid rounded" (click)="mostrar(img)" rel="preload" />
+            <img [src]="img" alt="Imagens da loja" class="img-fluid rounded" (click)="mostrar(img)" rel="preload" />
           </div>
         </div>
         <div *ngIf="s.descricao" [innerHtml]="s.descricao"></div>
@@ -63,8 +64,9 @@
     </div>
   </div>
 </article>
+<!-- Fim Sobre-->
 
-<!--LOGOS dos Carros -->
+<!--Logos dos Carros -->
 <article class="fundo">
   <div class="container-fluid">
     <div class="col-12 ">
@@ -73,8 +75,8 @@
     <div class="col-12 imagens">
       <div class="container">
         <div class="row">
-          <div class="mx-auto logos" *ngFor="let img of imagens">
-            <img [src]="img" rel="preload"/>
+          <div class="mx-auto logos" *ngFor="let img of imagensLogos">
+            <img [src]="img.src" [alt]="img.alt" rel="preload"/>
           </div>
         </div>
       </div>
@@ -82,17 +84,13 @@
   </div>
 </article>
 
-
-
-
-
-
+<!-- Mapa do Local -->
 <article class="mapas">
   <div class="container">
     <div>
       <h2>LOCALIZAÇÃO</h2>
       <iframe
-      title="Mapa"
+      title="Mapa da localização da TOYOTA LAGES"
        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.6407135843847!2d-47.96017098599492!3d-15.822887689033498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a303678269ecb%3A0x65e17c1e55a2c9cd!2sToyota+Lages+Automotive+Center!5e0!3m2!1spt-BR!2sbr!4v1556824704411!5m2!1spt-BR!2sbr"  height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </div>

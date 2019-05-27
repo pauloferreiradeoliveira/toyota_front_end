@@ -4,22 +4,24 @@
   </div>
 </article>
 
-<article class="container">
-  <div class="row">
-    <div class="col-12 col-md-4" *ngIf="( servicos$ | async) as servicos; else loading">
+<article class="container" >
+  <div class="row" *ngIf="( servicos$ | async) as servicos; else loading">
+    <div class="col-12 col-md-4">
       <div class="panel-heading card-header accordion" routerLinkActive="active" *ngFor="let l of servicos">
-        <a [routerLink]="[l.id]">{{ l.titulo | uppercase }}</a>
+        <a [routerLink]="[l.id]" (click)="scroll(target)">{{ l.titulo | uppercase }}</a>
       </div>
     </div>
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-8" #target>
       <router-outlet></router-outlet>
     </div>
   </div>
+
+  <ng-template #loading>
+      <div class="d-flex justify-content-center" style="padding-top: 10px">
+        <div class="spinner-border text-danger" role="status" style="width: 3rem; height: 3rem;">
+        </div>
+      </div>
+    </ng-template>
 </article>
 
-<ng-template #loading>
-  <div class="d-flex justify-content-center">
-    <div class="spinner-border text-danger" role="status" style="width: 3rem; height: 3rem;">
-    </div>
-  </div>
-</ng-template>
+

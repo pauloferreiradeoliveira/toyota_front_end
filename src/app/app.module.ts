@@ -7,10 +7,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SharedModule } from './shared/shared.module';
-import { UsuarioModule } from './adm/usuario/usuario.module';
 import { TokenInterceptor } from './interceptors/token.Interceptor';
 import { RefreshTokenInterceptor } from './interceptors/refresh.Interceptor';
 import { NotFoundComponent } from './not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -22,8 +22,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpClientModule,
     AppRoutingModule,
     ModalModule.forRoot(),
-    SharedModule,
-    UsuarioModule
+    SharedModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },

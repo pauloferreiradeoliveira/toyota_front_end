@@ -8,26 +8,56 @@ main {
     background-color: $corFundoEscuro;
     font-family: $fontTitulo;
 
+    @media (min-width: 992px) {
+        margin-top: 0rem;
+        visibility: visible;
+        border-bottom: 1px $corf1 solid;
+        @include sombra();
+        color: #859096 !important;
+        height: 50px;
+    }
+
     a {
-        color: #859096
+        color: #859096;
     }
 
     i {
         margin-right: 0.1rem;
         margin-left: 1rem;
+
+        @media (min-width: 992px) {
+            margin-left: 0.4rem;
+            visibility: visible;
+        }
     }
 
     .primeiro {
-
         h4 {
             font-family: $fontNormal;
             font-size: 12px;
             display: inline;
+            font-weight: bold;
             margin-left: 0.4rem;
+
+            @media (min-width: 992px) {
+                font-size: 14px;
+                margin-left: 0.4rem;
+            }
         }
     }
 }
 
+.logos {
+
+
+    img {
+        height: 20px;
+
+        &:first-of-type {
+            margin-right: 10px;
+        }
+    }
+}
 
 
 .meio {
@@ -38,7 +68,14 @@ main {
     font-family: $fontTitulo;
 
     .col-6 {
-        margin: 0px
+        margin: 0px;
+
+        @media (min-width: 992px) {
+            margin-top: 0.5rem;
+            margin-bottom: 3rem;
+            align-items: center;
+            align-content: center;
+        }
     }
 
     .col-4,
@@ -46,16 +83,95 @@ main {
         visibility: hidden;
         height: 0px;
         width: 0px;
+
+        @media (min-width: 992px) {
+            visibility: visible;
+            margin-top: 0.5rem;
+            margin-bottom: 3rem;
+            align-items: center;
+            align-content: center;
+        }
     }
 
     button {
         color: #fff
     }
+
+    @media (min-width: 992px) {
+        margin-top: 0rem;
+
+
+        .col-4 {
+            margin-top: -3rem
+        }
+
+        .col-2 {
+            margin-top: -5rem
+        }
+
+        .btn {
+            margin-top: 0.3rem
+        }
+
+        .titulo {
+            color: $corsegunda;
+            font-size: 0.7rem;
+            text-align: center;
+
+
+            i {
+                font-size: 0.9rem;
+                color: $corprimario;
+            }
+        }
+
+        .subtitulo {
+            color: lighten($corsegunda, 25%);
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
 }
 
 .nav-item {
     a {
-        color: $corfundo
+        color: $corfundo;
+
+        @media (min-width: 992px) {
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 992px) {
+
+        border: 1px solid #EEE;
+        padding: 8px;
+        flex: 1 1 auto;
+        line-height: 1.67;
+        text-align: center;
+        transition-duration: 0.5s;
+        font-family: $fontTitulo;
+        border-bottom: 4px solid #EEE;
+
+
+        &:hover,
+        &:focus {
+            border-bottom: 4px solid $corprimario;
+
+            a {
+                color: darken($corsegunda, 50%) !important;
+            }
+        }
+    }
+}
+
+.active {
+    @media (min-width: 992px) {
+        border-bottom: 4px solid $corprimario;
+    }
+
+    a {
+        color: darken($corsegunda, 50%) !important;
     }
 }
 
@@ -73,18 +189,21 @@ footer {
 
     .sociais {
         text-align: right;
+    }
+}
 
-        i {
-            color: #fff;
-            cursor: help;
-            padding-left: .5rem;
-        }
+.what {
+    height: 16px;
+    margin-left: 10px;
+
+    path {
+        fill:  #859096 ;
     }
 }
 
 .ultimo {
     background-color: $corf1;
-    box-shadow: inset 0 -10px 10px -5px rgba(0, 0, 0, .06);
+    @include sombra();
     min-height: 1.5rem;
     padding-top: -0.5rem;
     font-family: $fontNormal;
@@ -92,119 +211,20 @@ footer {
 
     .container {
         text-align: center;
-        align-content: center;
-        align-items: center;
         font-size: 0.7rem;
     }
 }
 
+.btn-principal {
+    @include botao(#0E7BAA);
+}
+
+.btn-verde {
+    @include botao(#138641)
+}
+
 
 @media (min-width: 992px) {
-
-    .top {
-        margin-top: 0rem;
-        visibility: visible;
-        border-bottom: 1px $corf1 solid;
-        box-shadow: inset 0 -10px 10px -5px rgba(0, 0, 0, .06);
-        color: #859096 !important;
-        height: 50px;
-
-        i {
-            margin-left: 0.4rem;
-            visibility: visible;
-        }
-
-        .primeiro {
-            font-family: Open Sans;
-
-            h4 {
-                font-size: 14px;
-                font-weight: bold;
-                display: inline;
-                margin-left: 0.4rem;
-            }
-        }
-    }
-
-    .meio {
-        margin-top: 0rem;
-
-        .col-6,
-        .col-4,
-        .col-2 {
-            visibility: visible;
-            margin-top: 0.5rem;
-            margin-bottom: 3rem;
-            align-items: center;
-            align-content: center;
-        }
-
-        .col-4 {
-            margin-top: -3rem
-        }
-
-        .col-2 {
-            margin-top: -5rem
-        }
-
-        .btn {
-            margin-top: 0.3rem
-        }
-
-        .titulo {
-            color: $corsegunda;
-            font-weight: 600;
-            font-size: 0.7rem;
-            font-style: normal;
-            align-items: center;
-            text-align: center;
-
-
-            i {
-                font-size: 0.9rem;
-                color: $corprimario;
-            }
-        }
-
-        .subtitulo {
-            color: #c4cbd0;
-            font-weight: 700;
-            font-size: 1rem;
-            align-items: center;
-            text-align: center;
-        }
-
-        ::before,
-        ::after {
-            box-sizing: inherit;
-        }
-    }
-
-    .nav-item {
-        border: 1px solid #EEE;
-        padding: 8px;
-        flex: 1 1 auto;
-        line-height: 1.67;
-        text-align: center;
-        font-weight: 700;
-        transition-duration: 0.5s;
-        font-family: $fontTitulo;
-
-        a {
-            color: #888888;
-            font-size: 14px;
-        }
-    }
-
-    .nav-item:hover,
-    .nav-item:focus,
-    .active {
-        border-bottom: 5px solid $corprimario;
-
-        a {
-            color: #444 !important
-        }
-    }
 
     .menus {
         margin: -46px 0;

@@ -21,15 +21,15 @@ export class SobreService {
     return this.http.get<Sobre>('assets/dados/sobre1.json').pipe(take(1));
   }
 
-  getImagens(): string[] {
+  getImagens() {
     return [
-      'assets/logos/toyota.png',
-      'assets/logos/fiat.png',
-      'assets/logos/honda.png',
-      'assets/logos/hyundai.png',
-      'assets/logos/chevrolet.png',
-      'assets/logos/volkswagen.png',
-      'assets/logos/ford.png'
+      { src: 'assets/logos/toyota.png', alt: 'toyota' },
+      { src: 'assets/logos/fiat.png', alt: 'fiat' },
+      { src: 'assets/logos/honda.png', alt: 'honda' },
+      { src: 'assets/logos/hyundai.png', alt: 'hyundai' },
+      { src: 'assets/logos/chevrolet.png', alt: 'chevrolet' },
+      { src: 'assets/logos/volkswagen.png', alt: 'volkswagen' },
+      { src: 'assets/logos/ford.png', alt: 'ford' }
     ]
   }
 }
