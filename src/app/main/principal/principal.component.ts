@@ -1,5 +1,4 @@
-
-import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -18,21 +17,22 @@ import { Sobre } from './../../class/sobre.class';
   styleUrls: ['./principal.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class PrincipalComponent implements OnInit {
 
-  @ViewChild('test', {static: true}) myDivElementRef: ElementRef;
-
-  accordion = 'accordion';
-  sobre: Observable<Sobre[]>;
+  sobre$: Observable<Sobre[]>;
   servicos$: Observable<Servicos[]>;
-  imagensLogos;
-  imagensCar =  ['assets/silde1.jpeg', 'assets/silde2.jpeg', 'assets/silde3.jpeg'];
+  imagensLogos: any;
+  celular = false;
+  imagensCar = ['assets/silde1.jpeg', 'assets/silde2.jpeg', 'assets/silde3.jpeg'];
+  @ViewChild('test', {read: ElementRef, static: true })
+    public myDivElementRef: ElementRef<any>;
 
   constructor(private sobreSevice: SobreService,
               private alert: AlertService,
               private servicosSevicos: FuncionamentoService,
               private router: Router
-              ) { }
+  ) { }
 
   ngOnInit() {
     this.getSobre();
@@ -40,7 +40,7 @@ export class PrincipalComponent implements OnInit {
   }
 
   private getSobre(): void {
-    this.sobre = this.sobreSevice.getSobre();
+    this.sobre$ = this.sobreSevice.getSobre();
     this.servicos$ = this.servicosSevicos.list();
   }
 
@@ -59,12 +59,13 @@ export class PrincipalComponent implements OnInit {
   // Para Poder Movimentar
   private movimentar(numb: number, g: boolean): void {
     let i: number;
+    const element = this.myDivElementRef.nativeElement.children[1].children[1];
     if (g) {
-      i = this.myDivElementRef.nativeElement.scrollLeft - numb;
+      i = element.scrollLeft - numb;
     } else {
-      i = this.myDivElementRef.nativeElement.scrollLeft + numb;
+      i = element.scrollLeft + numb;
     }
-    this.myDivElementRef.nativeElement.scrollTo({ left: (i), behavior: 'smooth' });
+    element.scrollTo({ left: (i), behavior: 'smooth' });
   }
 
   passarServico(id: number) {
