@@ -1,12 +1,12 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Observable, EMPTY } from 'rxjs';
 import { Servicos } from 'src/app/class/servico.class';
-;
+
 import { Router, ActivatedRoute } from '@angular/router';
 import { AlertService } from 'src/app/shared/alert.service';
 import { take, switchMap } from 'rxjs/operators';
 import { FuncionamentoService } from 'src/app/servico/funcionamento.service';
-import { text } from '@angular/core/src/render3';
+
 
 @Component({
   selector: 'app-lista-servicos',

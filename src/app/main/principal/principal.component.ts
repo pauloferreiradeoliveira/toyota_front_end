@@ -20,7 +20,7 @@ import { Sobre } from './../../class/sobre.class';
 })
 export class PrincipalComponent implements OnInit {
 
-  @ViewChild('test') myDivElementRef: ElementRef;
+  @ViewChild('test', {static: true}) myDivElementRef: ElementRef;
 
   accordion = 'accordion';
   sobre: Observable<Sobre[]>;

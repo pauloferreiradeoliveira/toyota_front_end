@@ -17,19 +17,29 @@ export enum Tipos {
 export class UsuarioService extends CrudService<Usuario> {
   confirmResult: Subject<Tipos>;
 
-  constructor(protected  http: HttpClient) {
+  constructor(protected http: HttpClient) {
     super(http, `${environment.API}usuario`);
     this.confirmResult = new Subject();
   }
 
-  getUsuarioAutenticado() {
-    const token = localStorage.getItem('token');
-    return token;
+  getUsuarioAutenticado(): string | null {
+    try {
+      const token = localStorage.getItem('token');
+      return token;
+    } catch {
+      this.limparToken();
+      return null;
+    }
   }
 
-  getUsuario(): Usuario{
-    const token = JSON.parse(localStorage.getItem('usuario'));
-    return token;
+  getUsuario(): Usuario {
+    try {
+      const token = JSON.parse(localStorage.getItem('usuario'));
+      return token;
+    } catch {
+      this.limparToken();
+      return null;
+    }
   }
 
   limparToken() {
@@ -40,7 +50,6 @@ export class UsuarioService extends CrudService<Usuario> {
   ativar(id: number) {
     return this.http.get(`${environment.API}usuario/ativar/${id}`).pipe(take(1));
   }
-
 
   login(usuario: Usuario) {
     const lugar = `${environment.API}login`;

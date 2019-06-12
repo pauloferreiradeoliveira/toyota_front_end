@@ -15,11 +15,11 @@ const routes: Routes = [
       { path: 'email', component: EmailComponent },
       {
         path: 'servicos',
-        loadChildren: './servicos/servicos.module#ServicosModule'
+        loadChildren: () => import('./servicos/servicos.module').then(m => m.ServicosModule)
       },
       {
         path: 'usuario',
-        loadChildren: './usuario/usuario.module#UsuarioModule',
+        loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioModule),
         canActivate: [AdmGuard],
         canLoad: [AdmGuard]
       }

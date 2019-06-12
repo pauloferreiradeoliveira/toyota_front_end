@@ -6,11 +6,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './main/main.module#MainModule'
+    loadChildren: () => import(`./main/main.module`).then(m => m.MainModule),
   },
   {
     path: 'adm',
-    loadChildren: './adm/adm.module#AdmModule'
+    loadChildren: () => import('./adm/adm.module').then(m => m.AdmModule),
   },
   { path: '**', component: NotFoundComponent}
 ];

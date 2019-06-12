@@ -12,11 +12,12 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { SharedModule } from '../shared/shared.module';
 
+
 @NgModule({
   declarations: [
     MainComponent,
     PrincipalComponent,
-    SobreComponent
+    SobreComponent,
   ],
   imports: [
     CommonModule,

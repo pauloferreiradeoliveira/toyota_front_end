@@ -24,9 +24,7 @@ export class CrudService<T> {
 
     save(record: T) {
         if (record['id']) {
-            console.log("Entrou");
             return this.update(record);
-
         }
         return this.create(record);
     }

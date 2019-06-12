@@ -14,8 +14,14 @@ const routes: Routes = [
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: PrincipalComponent },
       { path: 'sobre', component: SobreComponent },
-      { path: 'contato', loadChildren: './contato/contato.module#ContatoModule' },
-      { path: 'funcionamento', loadChildren: './funcionamento/funcionamento.module#FuncionamentoModule' },
+      {
+        path: 'contato',
+        loadChildren: () => import('./contato/contato.module').then(m => m.ContatoModule)
+      },
+      {
+        path: 'funcionamento',
+        loadChildren: () =>  import('./funcionamento/funcionamento.module').then(m => m.FuncionamentoModule)
+      },
     ]
   }
 ];
